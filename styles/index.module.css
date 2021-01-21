@@ -1,0 +1,46 @@
+.home-container {
+  margin: 30vh auto;
+  text-align: center;
+}
+.home-container h1 {
+  background-color: white;
+}
+.typewriter {
+  font-size: 30px;
+  background-color: white;
+}
+@media (max-width: 600px) {
+  .home-container h1,
+  .typewriter {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .home-container {
+    margin: 15vh auto;
+  }
+}
+@media (max-width: 200px) {
+  .home-container {
+    margin: 10vh auto;
+  }
+  .home-container h1,
+  .typewriter {
+    font-size: 15px;
+  }
+}
+@media (max-width: 150px) {
+  .home-container {
+    margin: 5vh auto;
+  }
+  .home-container h1,
+  .typewriter {
+    font-size: 10vw;
+  }
+}
+@media (max-width: 100px) {
+  .home-container h1,
+  .typewriter {
+    font-size: 15vw;
+  }
+}
