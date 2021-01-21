@@ -12,7 +12,7 @@ function blogs(props) {
 export const getStaticProps = async (context) => {
   let singleBlog = await fetchData({
     entryId: `${context.params.id}`,
-    contentType: "",
+    contentType: "blog_rendering_backend",
   });
   return {
     props: {
@@ -22,7 +22,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  let allBlogs = await fetchData({ contentType: "" });
+  let allBlogs = await fetchData({ contentType: "blog_rendering_backend" });
   let paths = allBlogs.map((blog) => {
     return {
       params: {
