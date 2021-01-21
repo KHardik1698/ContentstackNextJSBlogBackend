@@ -7,7 +7,9 @@ function blogs(props) {
     <div>
       <h1>A Blog</h1>
       <div>
+        <h1>{blog.blog_title}</h1>
         <img src={blog.blog_image.url} alt="" />
+        <p>{blog.blog_content}</p>
       </div>
     </div>
   );
