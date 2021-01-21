@@ -1,12 +1,34 @@
 import fetchData from "../fetchData";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ParticlesBg from "particles-bg";
+import Typewriter from "typewriter-effect";
+import styles from "../styles/index.module.css";
 
 function Home(props) {
   return (
     <div>
       <Header header={props.header} />
-      <h1>Home</h1>
+      <div className={styles["home-container"]}>
+        <h1>We Love Sports</h1>
+        <div className={styles["typewriter"]}>
+          <Typewriter
+            options={{
+              strings: [
+                "Hello",
+                "Welcome to Sports Blogs",
+                "Get ready to read some fascinating Blogs about Sports",
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              deleteSpeed: 50,
+              pauseFor: 1000,
+            }}
+          />
+        </div>
+        <ParticlesBg type="cobweb" bg={true} />
+      </div>
       <Footer footer={props.footer} />
     </div>
   );
