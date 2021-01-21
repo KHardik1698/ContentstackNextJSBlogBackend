@@ -1,10 +1,14 @@
 import fetchData from "../../fetchData";
 
 function blogs(props) {
-  //   console.log(props.singleBlog);
+  // console.log(props.singleBlog);
+  let blog = props.singleBlog;
   return (
     <div>
       <h1>A Blog</h1>
+      <div>
+        <img src={blog.blog_image.url} alt="" />
+      </div>
     </div>
   );
 }
