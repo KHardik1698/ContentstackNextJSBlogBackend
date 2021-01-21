@@ -12,10 +12,14 @@ function blogs(props) {
           return (
             // individual cards container
             <div key={i}>
-              <p>
-                {i + 1} ---> {blog.blog_title}
-              </p>
-              <img src={blog.blog_image.url} alt="Sport" />
+              <Link href={`/blog/${blog.uid}`}>
+                <div>
+                  <p>
+                    {i + 1} ---> {blog.blog_title}
+                  </p>
+                  <img src={blog.blog_image.url} alt="Sport" />
+                </div>
+              </Link>
             </div>
           );
         })}
