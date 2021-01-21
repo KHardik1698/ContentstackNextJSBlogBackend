@@ -1,27 +1,30 @@
 import Link from "next/link";
 import fetchData from "../../fetchData";
+import styles from "./index.module.css";
 
 function blogs(props) {
-  // console.log(props.singleBlog);
   let blog = props.singleBlog;
   return (
     <div>
-      <h1>A Blog</h1>
-      <div>
-        <h1>{blog.blog_title}</h1>
-        <img src={blog.blog_image.url} alt={blog.blog_title} />
-        <p>{blog.blog_content}</p>
-        <div>
-          {blog.related_blogs.map((blog) => {
+      <h1 className={styles["blog-header"]}>Sports Blog</h1>
+      <div className={styles["container"]}>
+        <p className={styles["blog-title"]}>{blog.blog_title}</p>
+        <div className={styles["blog-image-container"]}>
+          <img className={styles["blog-image"]} src={blog.blog_image.url} alt={blog.blog_title} />
+        </div>
+        <p className={styles["blog-content"]}>{blog.blog_content}</p>
+        <aside className={styles["related-blogs-container"]}>
+          <p>Related to this...</p>
+          {blog.related_blogs.map((blog, i) => {
             return (
-              <div>
+              <div key={i}>
                 <Link href={blog.related_blog[0].uid}>
-                  <a>{blog.blog_title}</a>
+                  <p className={styles["related-blog"]}>{blog.blog_title}</p>
                 </Link>
               </div>
             );
           })}
-        </div>
+        </aside>
       </div>
     </div>
   );
