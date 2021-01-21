@@ -1,23 +1,26 @@
 import Link from "next/link";
 import fetchData from "../../fetchData";
+import styles from "./index.module.css";
 
 function blogs(props) {
   let blogs = props.allBlogs;
   return (
     <div>
-      <h1>Sports Blog</h1>
-      {/* all cards container */}
-      <div>
+      <h1 className={styles["blog-header"]}>Sports Blog</h1>
+      <div className={styles["container"]}>
         {blogs.map((blog, i) => {
           return (
-            // individual cards container
             <div key={i}>
               <Link href={`/blog/${blog.uid}`}>
-                <div>
-                  <p>
-                    {i + 1} ---> {blog.blog_title}
-                  </p>
-                  <img src={blog.blog_image.url} alt={blog.blog_title} />
+                <div className={styles["card-container"]}>
+                  <p className={styles["blog-title"]}>{blog.blog_title}</p>
+                  <div className={styles["blog-image-container"]}>
+                    <img
+                      className={styles["blog-image"]}
+                      src={blog.blog_image.url}
+                      alt={blog.blog_title}
+                    />
+                  </div>
                 </div>
               </Link>
             </div>
