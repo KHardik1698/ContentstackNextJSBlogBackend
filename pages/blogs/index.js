@@ -1,11 +1,14 @@
 import Link from "next/link";
 import fetchData from "../../fetchData";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import styles from "./index.module.css";
 
 function blogs(props) {
   let blogs = props.allBlogs;
   return (
     <div>
+      <Header header={props.header} />
       <h1 className={styles["blog-header"]}>Sports Blog</h1>
       <div className={styles["container"]}>
         {blogs.map((blog, i) => {
@@ -27,6 +30,7 @@ function blogs(props) {
           );
         })}
       </div>
+      <Footer footer={props.footer} />
     </div>
   );
 }
