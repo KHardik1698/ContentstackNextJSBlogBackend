@@ -1,3 +1,4 @@
+import Link from "next/link";
 import fetchData from "../../fetchData";
 
 function blogs(props) {
@@ -5,13 +6,20 @@ function blogs(props) {
   return (
     <div>
       <h1>Sports Blog</h1>
-      {blogs.map((blog, i) => {
-        return (
-          <div key={i}>
-            <p>{blog.blog_title}</p>
-          </div>
-        );
-      })}
+      {/* all cards container */}
+      <div>
+        {blogs.map((blog, i) => {
+          return (
+            // individual cards container
+            <div key={i}>
+              <p>
+                {i + 1} ---> {blog.blog_title}
+              </p>
+              <img src={blog.blog_image.url} alt="Sport" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
