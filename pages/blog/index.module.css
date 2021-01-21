@@ -51,3 +51,75 @@
   font-size: 25px;
   margin: 10vh 0px;
 }
+@media (max-width: 600px) {
+  .blog-image-container {
+    width: 40vh;
+    height: 30vh;
+  }
+  .blog-content,
+  .related-blogs-container > p,
+  .related-blog {
+    margin: 5vh;
+  }
+}
+@media (max-width: 400px) {
+  .blog-header {
+    font-size: 25px;
+  }
+  .blog-title {
+    margin: 1vh auto;
+    font-size: 25px;
+  }
+  .blog-image-container {
+    width: 20vh;
+    height: 15vh;
+  }
+  .blog-content {
+    margin: 1vh 3vh;
+    font-size: 15px;
+  }
+  .related-blogs-container > p,
+  .related-blog {
+    margin: 3vh;
+    font-size: 15px;
+  }
+}
+@media (max-width: 200px) {
+  .blog-header {
+    margin: 1vh auto;
+    font-size: 10vw;
+  }
+  .blog-title {
+    font-size: 10vw;
+  }
+  .blog-image-container {
+    width: 15vh;
+    height: 10vh;
+  }
+  .blog-content {
+    font-size: 12px;
+  }
+  .related-blogs-container > p,
+  .related-blog {
+    margin: 1vh;
+    font-size: 12px;
+  }
+  .related-links {
+    flex-direction: column;
+  }
+}
+@media (max-width: 150px) {
+  .container {
+    margin: 1vh;
+  }
+  .blog-image-container {
+    width: 50vw;
+    height: 30vw;
+  }
+  .blog-content,
+  .related-blogs-container > p,
+  .related-blog {
+    font-size: 10vw;
+    margin: 5vw;
+  }
+}
