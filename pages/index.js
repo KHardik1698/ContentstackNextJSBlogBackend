@@ -1,7 +1,13 @@
+import dynamic from "next/dynamic";
 import fetchData from "../fetchData";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ParticlesBg from "particles-bg";
+const ParticlesBg = dynamic(
+  () => {
+    return import("particles-bg");
+  },
+  { ssr: false }
+);
 import Typewriter from "typewriter-effect";
 import styles from "../styles/index.module.css";
 
