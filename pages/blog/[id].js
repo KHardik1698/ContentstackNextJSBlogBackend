@@ -1,3 +1,4 @@
+import Link from "next/link";
 import fetchData from "../../fetchData";
 
 function blogs(props) {
@@ -10,6 +11,17 @@ function blogs(props) {
         <h1>{blog.blog_title}</h1>
         <img src={blog.blog_image.url} alt="" />
         <p>{blog.blog_content}</p>
+        <div>
+          {blog.related_blogs.map((blog) => {
+            return (
+              <div>
+                <Link href={blog.related_blog[0].uid}>
+                  <a>{blog.blog_title}</a>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
