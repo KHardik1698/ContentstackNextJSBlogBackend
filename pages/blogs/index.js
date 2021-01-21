@@ -17,7 +17,7 @@ function blogs(props) {
                   <p>
                     {i + 1} ---> {blog.blog_title}
                   </p>
-                  <img src={blog.blog_image.url} alt="Sport" />
+                  <img src={blog.blog_image.url} alt={blog.blog_title} />
                 </div>
               </Link>
             </div>

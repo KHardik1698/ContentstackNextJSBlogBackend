@@ -9,7 +9,7 @@ function blogs(props) {
       <h1>A Blog</h1>
       <div>
         <h1>{blog.blog_title}</h1>
-        <img src={blog.blog_image.url} alt="" />
+        <img src={blog.blog_image.url} alt={blog.blog_title} />
         <p>{blog.blog_content}</p>
         <div>
           {blog.related_blogs.map((blog) => {
