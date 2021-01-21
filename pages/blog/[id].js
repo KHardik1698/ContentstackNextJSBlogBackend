@@ -18,15 +18,17 @@ function blogs(props) {
         <p className={styles["blog-content"]}>{blog.blog_content}</p>
         <aside className={styles["related-blogs-container"]}>
           <p>Related to this...</p>
-          {blog.related_blogs.map((blog, i) => {
-            return (
-              <div key={i}>
-                <Link href={blog.related_blog[0].uid}>
-                  <p className={styles["related-blog"]}>{blog.blog_title}</p>
-                </Link>
-              </div>
-            );
-          })}
+          <div className={styles["related-links"]}>
+            {blog.related_blogs.map((blog, i) => {
+              return (
+                <div key={i}>
+                  <Link href={blog.related_blog[0].uid}>
+                    <p className={styles["related-blog"]}>{blog.blog_title}</p>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </aside>
       </div>
       <Footer footer={props.footer} />
