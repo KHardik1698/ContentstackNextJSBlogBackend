@@ -33,9 +33,13 @@ function blogs(props) {
 
 export const getStaticProps = async () => {
   let allBlogs = await fetchData({ contentType: "blog_rendering_backend" });
+  let header = await fetchData({ contentType: "hardik_blog_rendering_header" });
+  let footer = await fetchData({ contentType: "hardik_blog_rendering_footer" });
   return {
     props: {
       allBlogs: [...allBlogs],
+      header: [...header],
+      footer: [...footer],
     },
   };
 };
