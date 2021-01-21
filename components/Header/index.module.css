@@ -36,12 +36,12 @@
     padding: 1vh 0px;
   }
   .header-logo-container {
-    width: 8vh;
+    width: 5vh;
   }
   .team-name {
-    font-size: 20px;
+    font-size: 15px;
   }
   .navigation-links {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
