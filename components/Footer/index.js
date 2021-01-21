@@ -7,7 +7,7 @@ function Footer(props) {
     <div className={styles["footer-container"]}>
       <p>{footer.footer_title}</p>
       <p>{footer.copyright_text}</p>
-      <div>
+      <div className={styles["icons-container"]}>
         <FaLinkedin className={styles["icon"]} size="5vh" color="black" />
         <FaTwitterSquare className={styles["icon"]} size="5vh" color="black" />
         <FaGithubSquare className={styles["icon"]} size="5vh" color="black" />

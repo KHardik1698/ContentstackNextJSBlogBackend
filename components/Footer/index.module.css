@@ -4,7 +4,31 @@
   text-align: center;
   padding: 5vh 0px;
   box-shadow: 0px 0px 10px 0px black;
+  background-color: white;
 }
 .icon {
   margin: 5vh;
+}
+@media (max-width: 400px) {
+  .footer-container p {
+    margin: 1vh;
+  }
+  .icon {
+    margin: 2vh;
+  }
+}
+@media (max-width: 150px) {
+  .footer-container {
+    padding: 1vh 0px;
+  }
+  .footer-container p {
+    font-size: 10px;
+  }
+  .icons-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon {
+    margin: auto;
+  }
 }
