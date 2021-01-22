@@ -11,7 +11,7 @@ The Backend/Data-Source for Company Data is stored at Contentstack CMS.
 
 **http://localhost:3000/** will be the Home Page of the Project.\
 **http://localhost:3000/blogs** will be the Page for All Blogs.\
-**http://localhost:3000/blog/id** will be the Page for Single Blog.\
+**http://localhost:3000/blog/id** will be the Page for Single Blog.
 
 > # Folder Structure:
 
@@ -36,7 +36,7 @@ It contains Header Component, Home Component & Footer Component.\
 There is a blogs page which has all the Blogs Cards.\
 It contains Header Component, Blogs Component & Footer Component.\
 There is a blog page which has a Single Blog.\
-It contains Header Component, Single Blog Component & Footer Component.\
+It contains Header Component, Single Blog Component & Footer Component.
 
 > # Styles:
 
